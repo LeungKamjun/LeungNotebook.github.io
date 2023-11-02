@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 100px;
+            padding: 5px 10px;
+            border: 1px solid pink;
+            margin: 2px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // let line = prompt('请输入行数')
+    // // let column = prompt('请输入行数')
+    for (let i = 1; i <= 9; i++) {
+        for (let l = 1; l <= i; l++) {
+            document.write(`<span>${l} × ${i} = ${i*l} </span>`)
+        }
+        document.write('<br>')
+    }
+</script>
+</body>
+</html>

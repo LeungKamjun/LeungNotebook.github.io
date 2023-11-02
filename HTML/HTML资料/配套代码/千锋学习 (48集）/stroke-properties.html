@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stroke-properties</title>
+</head>
+<body>
+  <svg width="300" height="80">
+    <g fill="none">
+      <path stroke="red" d="M5 20 l215 0" />
+      <path stroke="black" d="M5 40 l215 0" />
+      <path stroke="blue" d="M5 60 l215 0" />
+    </g>
+  </svg>
+
+  <br>
+  <svg width="300" height="80">
+    <g fill="none" stroke="black">
+      <path stroke-width="2" d="M5 20 l215 0" />
+      <path stroke-width="4" d="M5 40 l215 0" />
+      <path stroke-width="6" d="M5 60 l215 0" />
+    </g>
+  </svg>
+
+  <br>
+  <svg width="300" height="80">
+    <g fill="none" stroke="black" stroke-width="6">
+      <path stroke-linecap="butt" d="M5 20 l215 0" />
+      <path stroke-linecap="round" d="M5 40 l215 0" />
+      <path stroke-linecap="square" d="M5 60 l215 0" />
+    </g>
+  </svg>
+
+  <br>
+  <svg width="300" height="80">
+    <g fill="none" stroke="black" stroke-width="4">
+      <path stroke-dasharray="5,5" d="M5 20 l215 0" />
+      <path stroke-dasharray="10,10" d="M5 40 l215 0" />
+      <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
+    </g>
+  </svg>
+</body>
+</html>

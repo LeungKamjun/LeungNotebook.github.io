@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text</title>
+</head>
+<body>
+  <svg width="300" height="30">
+    <text x="0" y="15" fill="red">I love SVG!</text>
+  </svg>
+  <br>  
+  <svg width="200" height="60">
+    <text x="0" y="15" fill="red" transform="rotate(30 20 40)">I love SVG!</text>
+  </svg>
+  <br>
+  <svg width="200" height="90">
+    <text x="10" y="20" fill="red">
+      Several lines
+      <tspan x="10" y="45">First line</tspan>
+      <tspan x="10" y="70">second line</tspan>
+    </text>
+  </svg>
+  <br>
+  <svg width="200" height="30" xmlns:xlink="https://www.w3.org/1999/xlink">
+    <a xlink:href="text2.html" target="_black">
+      <text x="10" y="15" fill="red">I love SVG!</text>
+    </a>
+  </svg>
+</body>
+</html>

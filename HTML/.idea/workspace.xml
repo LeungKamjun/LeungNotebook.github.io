@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4e30ada4-a03c-4430-a9c3-cb41d6b656e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../JavaScript/JavaScript基础/code/111111.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/无序列表.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/自定义列表.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/../MySQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHP.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PHP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2PSP1PhAkb7AxBvs1cS5pXCQ2xk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="无序列表.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/html/无序列表.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.无序列表.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e30ada4-a03c-4430-a9c3-cb41d6b656e6" name="Default Changelist" comment="" />
+      <created>1683447294085</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683447294085</updated>
+      <workItem from="1683447297113" duration="588000" />
+      <workItem from="1683535092575" duration="3000" />
+      <workItem from="1684163148016" duration="688000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1684163842934">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/-452.1080.1707.960/0.0.1920.1080@0.0.1920.1080" timestamp="1684163842934" />
+    <state x="324" y="181" key="SettingsEditor" timestamp="1684163829167">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="324" y="181" key="SettingsEditor/-2560.0.1707.960/0.0.1920.1080@0.0.1920.1080" timestamp="1683447324542" />
+    <state x="324" y="181" key="SettingsEditor/-452.1080.1707.960/0.0.1920.1080@0.0.1920.1080" timestamp="1684163829167" />
+  </component>
+</project>

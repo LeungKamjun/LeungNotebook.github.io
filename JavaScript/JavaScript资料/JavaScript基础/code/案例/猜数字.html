@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function hex_ran() {
+        let hex_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+        return hex_arr[Math.floor(Math.random() * hex_arr.length)]  // 输出16进制颜色的单个值
+    }
+
+    function rgb_ran() {
+        return Math.floor(Math.random() * 256)
+    }
+
+    function getRandomColor(flag = true) {
+        if (flag) {
+            let hex_color = ''
+            for (let i = 0; i < 6; i++) {
+                hex_color += hex_ran()
+            }
+            hex_color = '#' + hex_color
+            return hex_color
+        } else {
+            let rgb_arr = []
+            for (let i = 0; i < 3; i++) {
+                rgb_arr.push(rgb_ran())
+            }
+            return `rgb(${rgb_arr[0]},${rgb_arr[1]},${rgb_arr[2]})`
+
+        }
+    }
+
+    let input = Boolean(prompt(`请输入true或false`))
+    let color = getRandomColor()
+    console.log(color)
+</script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>全栈网络安全进阶</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#必修一红队渗透测试与attck框架入门">必修一、红队渗透测试与ATT&amp;CK框架入门</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#红队渗透测试漏洞术语">红队渗透测试漏洞术语</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#漏洞利用">漏洞利用</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#漏洞">漏洞</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#cve">CVE</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#poc">PoC</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#exp">Exp</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#payload">Payload</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#shellcode">Shellcode</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#恶意程序">恶意程序</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#malware">Malware</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#virus-病毒"><strong>Virus 病毒</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#worm-蠕虫病毒">Worm 蠕虫病毒</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#trojan-horse">Trojan Horse</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#romsomware">Romsomware</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#spyware">Spyware</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#rootkits">Rootkits</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#攻击方法">攻击方法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#apt攻击">APT攻击</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#零日攻击">零日攻击</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#钓鱼攻击">钓鱼攻击</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#鱼叉钓鱼">鱼叉钓鱼</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#鲸钓攻击">鲸钓攻击</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#水坑攻击">水坑攻击</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#红队渗透测试方法论">红队渗透测试方法论</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#attck红蓝对抗框架">ATT&amp;CK红蓝对抗框架</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#矩阵战术技术">矩阵战术技术</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#矩阵图">矩阵图</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#attck战术">ATT&amp;CK战术</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#必修二信息搜集原理与实践">必修二、信息搜集原理与实践</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1概述">1、概述</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11-信息收集类型">1.1 信息收集类型</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#12-信息收集的三个阶段">1.2 信息收集的三个阶段</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#13-信息收集的作用">1.3 信息收集的作用</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#14-目标资产">1.4 目标资产</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2ip信息搜集">2、IP信息搜集</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#21-ip地址可以进行收集的信息">2.1 IP地址可以进行收集的信息</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#22-端口扫描">2.2 端口扫描</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#23-隐藏接口">2.3 隐藏接口</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#24-运维自带后门">2.4 运维自带后门</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#25-已知常见后门">2.5 已知常见后门</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#26--c-段">2.6  c 段</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#27-旁注">2.7 旁注</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3域名与子域名信息收集">3、域名与子域名信息收集</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#31-通用技巧">3.1 通用技巧</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#32-敏感域名">3.2 敏感域名</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#33-其他">3.3 其他</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4其他信息收集">4、其他信息收集</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#41-目标app资产">4.1 目标app资产</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#42-基础设备信息">4.2 基础设备信息</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#43-通信基础架构">4.3 通信基础架构</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#44-云基础架构">4.4 云基础架构</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#45-网站内容">4.5 网站内容</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#46-目标基础信息">4.6 目标基础信息</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#47-员工信息">4.7 员工信息</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#48-互联网归档信息">4.8 互联网归档信息</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#49-目标社交账户信息">4.9 目标社交账户信息</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#410-对外服务">4.10 对外服务</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='必修一红队渗透测试与attck框架入门'><span>必修一、红队渗透测试与ATT&amp;CK框架入门</span></h1><h2 id='红队渗透测试漏洞术语'><span>红队渗透测试漏洞术语</span></h2><h3 id='漏洞利用'><span>漏洞利用</span></h3><h4 id='漏洞'><span>漏洞</span></h4><p><span> </span><strong><span>Vulnerability 漏洞</span></strong><span>：是指计算机软件、硬件、系统、应用、协议等反面的缺陷，使其保密性、完整性、可用性、访问控制等方面面临威胁</span></p><p><span>基于</span><strong><span>技术</span></strong><span>分类有：命令执行、权限绕过、缓冲区溢出、注入、解析、弱口令、信息泄露等</span></p><p><span>基于</span><strong><span>时间</span></strong><span>分类有：0 day（刚刚发现漏洞，厂商还未修复）、1 day（厂商刚修复的漏洞）、N day（） 等</span></p><h4 id='cve'><span>CVE</span></h4><p><strong><span>CVE(Common Vulnerabilities &amp; Exposures)</span></strong><span>： 通用漏洞和暴露，通过CNA机构分类漏洞编号，通过CVSS系统评估漏洞等级</span></p><h4 id='poc'><span>PoC</span></h4><p><strong><span>PoC(Proof of Concept)</span></strong><span> 概念验证，对一段漏洞验证程序或攻击阳历，仅能验证漏洞存在，不能对漏洞尽心实际性利用</span></p><h4 id='exp'><span>Exp</span></h4><p><strong><span>Exploit</span></strong><span> 漏洞利用，目的是获取未经授权的方位或执行意外操作等，平台：metasploit、Exploit DATABASE、CIA Hacking Tools Revealed</span></p><h4 id='payload'><span>Payload</span></h4><p><span>攻击载荷，攻击者在目标机器上执行的定制代码或程序，包括但不限于系统命令、会话建立、Shellcode</span></p><h4 id='shellcode'><span>Shellcode</span></h4><p><span>用于获取控制权或操作界面的攻击载荷代码，通常采用二进制机器代码</span></p><p><span>正反shell：shell需要捆绑到指定IP地址和端口号上，这个动作就是bindshell；由攻击方主动连接到受害者，则为正向shell；由受害者主动连接攻击方，则为反向shell</span></p><h3 id='恶意程序'><span>恶意程序</span></h3><h4 id='malware'><span>Malware</span></h4><p><span>Malware 恶意程序或软件，泛指病毒、蠕虫、木马、勒索软件、间谍软件等。用于对目标系统尽心入侵、控制、窃取、破坏等行动</span></p><h4 id='virus-病毒'><strong><span>Virus 病毒</span></strong></h4><p><span>病毒，通产依附在其他文件或程序上，不进行自我复制传播，当受害者运行其他程序时则病毒启动、对目标系统造成破坏</span></p><h4 id='worm-蠕虫病毒'><span>Worm 蠕虫病毒</span></h4><p><span>能独立于其他文件或程序运行，能基于网络进行自我复制和传播，能实现从点到面超大规模的破坏行为</span></p><h4 id='trojan-horse'><span>Trojan Horse</span></h4><p><span>特洛伊木马，通常潜伏于“合法”软件中运行（也可独立运行），不复制传播且高度隐蔽。木马在运行时能创建“后门”或者“隧道”，攻击者通过后门实现对目标系统的远程控制、监听、破坏等行为</span></p><h4 id='romsomware'><span>Romsomware</span></h4><p><span>勒索软件，能独立于其他文件或程序运行，能基于网络进行自我复制和传播，通过对目标系统的加密和劫持，实现对受害者的钱财勒索</span></p><h4 id='spyware'><span>Spyware</span></h4><p><span>间谍软件（流氓软件或恶意软件），值未经用户许可搜集用户个人信息的恶意程序。通过搜集网站浏览记录、键盘记录、账号密码等隐私信息、再以网页劫持、网址导航、弹框广告等方式变现盈利</span></p><h4 id='rootkits'><span>Rootkits</span></h4><p><span>可看成升级型的木马病毒，泛指能获取到 root 权限的恶意程序，包括系统内核rookit、内存rookit、应用程序rookit等类型</span></p><h3 id='攻击方法'><span>攻击方法</span></h3><h4 id='apt攻击'><span>APT攻击</span></h4><p><span>APT(Advanced Persistent Threat) 高级持续性威胁，针对特定目标进行的手段高超、低调隐蔽、时间持久、精心策划的攻击</span></p><h4 id='零日攻击'><span>零日攻击</span></h4><p><span>利用 0 day 漏洞发起的“核武器级”攻击，除非攻击目标存在超高价值，否则 0 day 不会轻易使用；相比之下，1/Nday 结合水坑或鱼塘攻击性价比更高</span></p><h3 id='钓鱼攻击'><span>钓鱼攻击</span></h3><p><span>攻击者改用社会工程学的方法，伪装成可信任的人或机构，通过高仿网站、欺诈邮件、虚假短信等方式，印有受害者“上钩”，根据不同实施方式，可细分为鱼叉攻击、鲸钓攻击、水坑攻击等方法</span></p><h4 id='鱼叉钓鱼'><span>鱼叉钓鱼</span></h4><p><span>通常采用定制化电子邮件等方式，针对个人、组织、政府等进行定向攻击，是当前APT或红队主要的“投毒”并获取入口的主要方式、</span></p><h4 id='鲸钓攻击'><span>鲸钓攻击</span></h4><p><span>针对核心人员或组织等进行鱼叉式攻击</span></p><h4 id='水坑攻击'><span>水坑攻击</span></h4><p><span>攻击者分析目标人员或组织的日常上网规律，提前入侵网站并植入恶意程序</span></p><h2 id='红队渗透测试方法论'><span>红队渗透测试方法论</span></h2><ul><li><p><span>渗透测试执行标准 </span><strong><span>PTES</span></strong></p><ul><li><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230707174006049.png" referrerpolicy="no-referrer" alt="image-20230707174006049"></li></ul></li><li><p><span>网络杀伤链 </span><strong><span>CKC(THE CYBER KILL CHAIN)</span></strong></p><ul><li><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230707174153866.png" referrerpolicy="no-referrer" alt="image-20230707174153866"></li></ul></li><li><p><strong><span>MITRE ATT&amp;CK</span></strong><span> 框架</span></p><ul><li><p><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230708163654104.png" referrerpolicy="no-referrer" alt="image-20230708163654104"></p></li><li><p><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230707174438932.png" referrerpolicy="no-referrer" alt="image-20230707174438932"><span> </span></p></li><li><p><span>ATT&amp;CK框架可以看成是在Cyber Kill Chain网络杀伤链的基础上，提供了更细粒度、更易共享的战术、技术、文档、工具等资源。</span></p></li><li><p><span>ATT&amp;CK框架分为PRE-ATT&amp;CK、ATT&amp;CK for Enterprise、ATT&amp;CK for Mobile三大部分，我们学习和讨论，一般重点关注ATT&amp;CK for Enterprise。</span></p></li><li><p><span>二维矩阵图</span></p><ul><li><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230707175407263.png" referrerpolicy="no-referrer" alt="image-20230707175407263"></li><li><span>ATT&amp;CK for Enterprise横轴表示战术（现在有14个），纵轴表示技术（177项技术348项子技术)，按照标准的TTPs来进行描述，能用于红蓝对抗、威胁情报分析、安全差距评估等。</span></li><li><span>ATT&amp;CK for Enterprise包括初始访问、执行、持久化、权限提升、防御绕过、凭证访问、发现、横向移动、搜集、命令与控制、数据获取、影响14个战术。</span></li></ul></li></ul></li></ul><h2 id='attck红蓝对抗框架'><span>ATT&amp;CK红蓝对抗框架</span></h2><h3 id='矩阵战术技术'><span>矩阵战术技术</span></h3><blockquote><p><span>ATT&amp;CK for Enterprise横轴表示战术（现在有14个），纵轴表示技术（177项技术348项子技术)</span></p><p><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230708162934856.png" referrerpolicy="no-referrer" alt="image-20230708162934856"></p></blockquote><h4 id='矩阵图'><span>矩阵图</span></h4><p><span>链接： </span><a href='https://attack.mitre.org/matrices/enterprise/#'><span>矩阵 - 企业 |米特雷·阿特克® (mitre.org)</span></a></p><h4 id='attck战术'><span>ATT&amp;CK战术</span></h4><blockquote><p><span>作战行动不要求使用所有战术，战术也没有先后顺序，战术的数量和顺序由使用者自行决定</span></p></blockquote><p><img src="%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%BF%9B%E9%98%B6image/image-20230708163654104.png" referrerpolicy="no-referrer" alt="image-20230708163654104"></p><h1 id='必修二信息搜集原理与实践'><span>必修二、信息搜集原理与实践</span></h1><h2 id='1概述'><span>1、概述</span></h2><h3 id='11-信息收集类型'><span>1.1 信息收集类型</span></h3><ul><li><p><span>主动信息收集</span></p><ul><li><span>与目标产生交互，对目标产生一定影响或有可能暴露自己</span></li></ul></li><li><p><span>被动信息收集</span></p><ul><li><span>不与目标产生教育，通过第三方获取目标信息</span></li></ul></li></ul><h3 id='12-信息收集的三个阶段'><span>1.2 信息收集的三个阶段</span></h3><ol start='' ><li><p><span>目标资产枚举</span></p><ol start='' ><li><span>用于列出能直接接触或简单分析就能获得的资产信息</span></li><li><span>例如：IP地址、域名</span></li></ol></li><li><p><span>资产属性关联</span></p><ol start='' ><li><span>通过分析资产清单后，得出与某一个资产信息关联的其他资产信息</span></li><li><span>例如：域名的子域名</span></li></ol></li><li><p><span>资产攻击面分析</span></p><ol start='' ><li><span>将资产信息和安全问题关联后得出的威胁清单，一般对应的时威胁建模阶段</span></li></ol></li></ol><h3 id='13-信息收集的作用'><span>1.3 信息收集的作用</span></h3><ul><li><span>了解目标自身</span></li><li><span>明确攻击范围</span></li><li><span>方便威胁建模</span></li></ul><h3 id='14-目标资产'><span>1.4 目标资产</span></h3><ul><li><span>IP地址</span></li><li><span>域名子域名</span></li><li><span>目标app资产</span></li><li><span>基础设备信息：路由器、交换机、防火墙、蜜罐等等</span></li><li><span>通信基础架构</span></li><li><span>云基础架构</span></li><li><span>电子邮件：社会工程学攻击</span></li><li><span>网站内容</span></li><li><span>目标基础信息</span></li><li><span>目标员工信息</span></li><li><span>互联网归档信息</span></li><li><span>目标社交账号信息</span></li><li><span>对外服务</span></li></ul><h2 id='2ip信息搜集'><span>2、IP信息搜集</span></h2><h3 id='21-ip地址可以进行收集的信息'><span>2.1 IP地址可以进行收集的信息</span></h3><ul><li><span>端口扫描</span></li><li><span>隐藏接口</span></li><li><span>运维自带后门</span></li><li><span>已知常见后面</span></li><li><span>c 段</span></li><li><span>旁注</span></li></ul><h3 id='22-端口扫描'><span>2.2 端口扫描</span></h3><ul><li><p><strong><span>描述</span></strong></p><ul><li><span>端口扫描可以用来发现主机开放的端口</span></li></ul></li><li><p><strong><span>利用场景</span></strong></p><ul><li><span>用于目标信息收集阶段，若判定目标防御手段薄弱，并且想要快速找到脆弱点，端口扫描就是最好的方法</span></li></ul></li><li><p><strong><span>相关工具</span></strong></p><ul><li><span>nmap</span></li><li><span>自定义的python脚本</span></li><li><span>masscan</span></li><li><span>在线端口扫描网站</span></li></ul></li></ul><h3 id='23-隐藏接口'><span>2.3 隐藏接口</span></h3><ul><li><p><strong><span>描述</span></strong></p><ul><li><span>不具备显式域名，直接使用ip+port或者路径访问的接口。通常是开发者预留的用于测试的、不稳定或者未完成的接口</span></li></ul></li><li><p><strong><span>利用场景</span></strong></p><ul><li><span>内部测试接口</span></li><li><span>合作方调用的接口</span></li><li><span>反射调用接口</span></li></ul></li><li><p><strong><span>相关工具</span></strong></p><ul><li><span>burpsuite</span></li></ul></li></ul><h3 id='24-运维自带后门'><span>2.4 运维自带后门</span></h3><ul><li><p><strong><span>描述</span></strong></p><ul><li><span>运维为了方便离线工作，会在服务器上留一些用于远程控制的工具或者运维账号</span></li></ul></li><li><p><strong><span>利用场景</span></strong></p><ul><li><span>在获取内部VPN的情况下，若存在此后门，可以方便的入侵到内网环境中</span></li></ul></li><li><p><strong><span>相关工具</span></strong></p><ul><li><span>nmap</span></li></ul></li></ul><h3 id='25-已知常见后门'><span>2.5 已知常见后门</span></h3><ul><li><p><strong><span>描述</span></strong></p><ul><li><span>网站后门，如webshell</span></li></ul></li><li><p><strong><span>利用场景</span></strong></p><ul><li><span>在入侵服务器之前，可能该服务器已经被其他黑客种马了，可以通过扫描常见的webshell来尝试连接</span></li></ul></li><li><p><strong><span>相关工具</span></strong></p><ul><li><span>菜刀、weevely、msf、蚁剑等后门链接</span></li></ul></li></ul><h3 id='26--c-段'><span>2.6  c 段</span></h3><ul><li><p><strong><span>描述</span></strong></p><ul><li><span>同网段不同服务器</span></li></ul></li><li><p><strong><span>利用场景</span></strong></p><ul><li><span>当目标网站找不到漏洞，但是该网站所在的服务器集群中，其他服务器有漏洞，那么可以拿下其他服务器后，再进行横向渗透</span></li></ul></li><li><p><strong><span>相关工具</span></strong></p><ul><li><span>c 段扫描工具</span></li><li><span>自定义python脚本</span></li><li><span>nmap</span></li></ul></li></ul><h3 id='27-旁注'><span>2.7 旁注</span></h3><ul><li><p><strong><span>描述</span></strong></p><ul><li><span>同服务器不同站点</span></li></ul></li><li><p><strong><span>利用场景</span></strong></p><ul><li><span>当目标网站没有弱点，但是该网站所在的服务器中部署多个站点，而其他站点有漏洞，此时可以通过旁注技术来入侵其他站点，继而打到攻陷目标站点的目的</span></li></ul></li><li><p><strong><span>相关工具</span></strong></p><ul><li><span>whois</span></li></ul></li></ul><h2 id='3域名与子域名信息收集'><span>3、域名与子域名信息收集</span></h2><h3 id='31-通用技巧'><span>3.1 通用技巧</span></h3><ul><li><p><span>Googlehacking</span></p><ul><li><span>baidu、duck</span></li></ul></li><li><p><span>shodanhacking</span></p><ul><li><span>fofa等网络空间测绘工具</span></li></ul></li><li><p><span>威胁分析平台</span></p><ul><li><span>腾讯哈勃</span></li><li><span>奇安信 alpha</span></li><li><span>微步在线</span></li><li><span>virustotal</span></li><li><span>virscan</span></li></ul></li></ul><h3 id='32-敏感域名'><span>3.2 敏感域名</span></h3><ul><li><span>测试页面</span></li><li><span>内部管理页面</span></li><li><span>违规开放的域名</span></li></ul><h3 id='33-其他'><span>3.3 其他</span></h3><ul><li><p><strong><span>端口扫描</span></strong></p></li><li><p><strong><span>敏感目录</span></strong></p></li><li><p><strong><span>操作系统类型和版本</span></strong></p></li><li><p><strong><span>Web 应用服务器类型及版本</span></strong></p><ul><li><span>nginx</span></li><li><span>apache</span></li><li><span>iis</span></li><li><span>weblogic</span></li><li><span>jboss</span></li></ul></li><li><p><strong><span>Web</span></strong><span> </span><strong><span>应用框架</span></strong></p><ul><li><span>struts2</span></li><li><span>spring</span></li><li><span>Django</span></li><li><span>flask</span></li><li><span>thinkphp</span></li><li><span>express</span></li></ul></li><li><p><strong><span>cms</span></strong></p><ul><li><span>wordpress</span></li><li><span>dedecms</span></li><li><span>metinfo</span></li><li><span>ecshop</span></li><li><span>友邻 b2b</span></li><li><span>edusoho 网校</span></li></ul></li></ul><h2 id='4其他信息收集'><span>4、其他信息收集</span></h2><h3 id='41-目标app资产'><span>4.1 目标app资产</span></h3><ul><li><span>业务有关app</span></li><li><span>员工内部app</span></li><li><span>测试版app</span></li></ul><h3 id='42-基础设备信息'><span>4.2 基础设备信息</span></h3><ul><li><span>防火墙</span></li><li><span>路由交换设备</span></li><li><span>Web应用防火墙</span></li><li><span>负载均衡设备</span></li><li><span>静态资源服务器</span></li><li><span>蜜罐</span></li><li><span>MySQL等数据服务器</span></li></ul><h3 id='43-通信基础架构'><span>4.3 通信基础架构</span></h3><ul><li><p><span>网络边界设备</span></p><ul><li><span>vpn、邮箱等各类网关</span></li></ul></li><li><p><span>使用过的运营商</span></p></li><li><p><span>cdn</span></p></li><li><p><span>dns</span></p></li></ul><h3 id='44-云基础架构'><span>4.4 云基础架构</span></h3><ul><li><span>云服务器厂商信息</span></li><li><span>docker 与服务器识别</span></li></ul><h3 id='45-网站内容'><span>4.5 网站内容</span></h3><ul><li><span>网站性质</span></li><li><span>网站业务</span></li></ul><h3 id='46-目标基础信息'><span>4.6 目标基础信息</span></h3><ul><li><span>域名备案</span></li></ul><h3 id='47-员工信息'><span>4.7 员工信息</span></h3><ul><li><span>目标社交账号小号</span></li><li><span>目标网盘信息</span></li><li><span>目标工号</span></li><li><span>目标vpn信息</span></li></ul><h3 id='48-互联网归档信息'><span>4.8 互联网归档信息</span></h3><ul><li><span>网页快照</span></li><li><span>网盘泄露</span></li></ul><h3 id='49-目标社交账户信息'><span>4.9 目标社交账户信息</span></h3><ul><li><span>公众号</span></li><li><span>知乎、b站等账号</span></li></ul><h3 id='410-对外服务'><span>4.10 对外服务</span></h3><ul><li><span>公司对外业务</span></li><li><span>第三方合作账号</span></li></ul></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let ageArr = []  // 创建新数组
+    let ageSum = 0
+    for (let i = 0; i < 5; i++) {  // 创建循环
+        let age = +prompt(`请输入第${i + 1}个年龄（1~100）`)
+        if (age >= 0 && age <= 100) {
+            ageArr.push(age)
+        } else {
+            alert('年龄不合规，1~100')
+            i -= 1
+        }
+    }
+    document.write(`${ageArr}</br>`)
+    document.write(`成年人的年龄`)
+    for (let i = 0; i < 5; i++) {
+        if (ageArr[i] >= 18) {
+            document.write(`${ageArr[i]} </t>`)
+        }
+        ageSum += ageArr[i]
+    }
+    for (let i = 0; i < ageArr.length - 1; i++) {
+        for (let j = 0; j < ageArr.length - i - 1; j++) {
+            if (ageArr[j] > ageArr[j+1]) {
+                let temp = ageArr[j]
+                ageArr[j] = ageArr[j+1]
+                ageArr[j+1] = temp
+            }
+        }
+    }
+    let ageAve = ageSum / ageArr.length
+    document.write(`</br>`)
+    document.write(`平均年龄为：${ageAve}</br>`)
+    document.write(`最大年龄为${ageArr[0]},最小年龄为${ageArr[ageArr.length-1]}`)
+</script>
+</body>
+</html>

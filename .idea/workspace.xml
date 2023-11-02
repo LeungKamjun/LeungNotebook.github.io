@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59e32f10-06bc-4268-97ab-7797fe000e9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/socketserver/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/socketserver/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/socketserver/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/test/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/test/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/clientdown/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/clientdown/SecLists-master.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/login_check.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/SecLists-master.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/Ubuntu_Server_1604_x64.vmwarevm.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/《鸟哥的Linux私房菜-基础篇》第四版.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/不吐不快2.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/不吐不快_Sugar(2).m4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/安全策略.one" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/广域网技术.one" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/work/uploadhw/serverfile/美丽之最.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/非阻塞/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/非阻塞/clinet1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/非阻塞/clinet2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/非阻塞/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/验证客户端的合法性/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/验证客户端的合法性/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python-note/python/network/验证客户端的合法性/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF技巧.html" beforeDir="false" afterPath="$PROJECT_DIR$/CTF/CTF技巧.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF技巧.md" beforeDir="false" afterPath="$PROJECT_DIR$/CTF/CTF技巧.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB).md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230525134023179.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230525134128715.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230525134807666.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230525141755204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230525141933849.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616210613957.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616210653859.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616210746150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616212324671.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616212335717.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616212837922.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616213040311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230616213051555.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230617233332196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630205600373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630210720516.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630210815025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630211520564.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630211553510.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630211719657.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230630211808524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702182720009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702182804495.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702182913541.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702182951299.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702183011766.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702183134524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702183149496.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702183440887.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702183708795.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF攻防世界(WEB)image/image-20230702184146511.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTF/CTF靶场渗透.html" beforeDir="false" afterPath="$PROJECT_DIR$/CTF/CTF靶场渗透.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/JavaScript.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/JavaScript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/MySQL.html" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/MySQL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OneNote/OneNote/伟杰 @ z52t7.onepkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/WWW/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/WWW/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/WWW/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/WWW/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/HTML.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/HTML.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python.md" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/.idea/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/network/work/tcp_login/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/network/work/tcp_login/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/network/work/tcp_upload/serverrecv/20230525162142.png" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/network/work/tcp_upload/serverrecv/20230525162142.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/network/粘包/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/network/粘包/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/network/粘包/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/network/粘包/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-note/python/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/python-note/python/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/密码学.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/密码学image/image-20230928161842447.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/密码学image/image-20230928161847621.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2XcRHqGuUUy7tVrkkG3LrBBmEpM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59e32f10-06bc-4268-97ab-7797fe000e9d" name="Changes" comment="" />
+      <created>1698926298078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698926298078</updated>
+      <workItem from="1698926299246" duration="874000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
